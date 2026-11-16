@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إبراهيم محمد عبد ربه | Marketing &amp; Content Portfolio</title>
+<meta name="description" content="بورتوفوليو إبراهيم محمد عبد ربه — خريج تسويق وتجارة إلكترونية. مشاريع تدريبية في السوشيال ميديا وصناعة المحتوى والاستراتيجية.">
+<meta property="og:title" content="إبراهيم محمد عبد ربه | Marketing &amp; Content Portfolio">
+<meta property="og:description" content="مشاريع تدريبية في السوشيال ميديا وصناعة المحتوى والاستراتيجية.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #D4A843;
+    --gold-light: #F0C865;
+    --dark: #0A0A0F;
+    --dark-2: #111118;
+    --dark-3: #1A1A26;
+    --text: #E8E8F0;
+    --text-muted: #A8A8C0;
+    --accent: #4A9EFF;
+    --green: #2ECC8A;
+    --red-soft: #FF6B6B;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--dark);
+    color: var(--text);
+    font-family: 'Cairo', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* NOISE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(212,168,67,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(74,158,255,0.08) 0%, transparent 50%),
+      var(--dark);
+  }
+
+  .hero-line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(212,168,67,0.3), transparent);
+    animation: linePulse 3s ease-in-out infinite;
+  }
+  .hero-line:nth-child(1) { left: 20%; animation-delay: 0s; }
+  .hero-line:nth-child(2) { left: 50%; animation-delay: 1s; }
+  .hero-line:nth-child(3) { left: 80%; animation-delay: 2s; }
+
+  @keyframes linePulse {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.6; }
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 800px; }
+
+  .badge {
+    display: inline-block;
+    padding: 6px 20px;
+    border: 1px solid rgba(212,168,67,0.4);
+    border-radius: 50px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 32px;
+    background: rgba(212,168,67,0.05);
+    animation: fadeInDown 0.8s ease forwards;
+  }
+
+  .hero-title {
+    font-family: 'Tajawal', sans-serif;
+    font-size: clamp(36px, 8vw, 80px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    animation: fadeInUp 0.9s ease 0.2s both;
+  }
+
+  .hero-title span {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-sub {
+    font-size: clamp(14px, 2.5vw, 18px);
+    color: var(--text-muted);
+    margin-bottom: 48px;
+    line-height: 1.8;
+    animation: fadeInUp 0.9s ease 0.4s both;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.9s ease 0.6s both;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--gold);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 11px;
+    animation: bounce 2s ease infinite;
+  }
+
+  .scroll-hint::after {
+    content: '';
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-8px); }
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 80px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(212,168,67,0.4), transparent);
+    max-width: 120px;
+  }
+
+  .section-title {
+    font-family: 'Tajawal', sans-serif;
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: 700;
+    margin-bottom: 48px;
+    line-height: 1.3;
+  }
+
+  /* CARDS GRID */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .card {
+    background: var(--dark-2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(212,168,67,0.05) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212,168,67,0.25);
+  }
+
+  .card:hover::before { opacity: 1; }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    background: var(--dark-3);
+  }
+
+  .card-tag {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    background: rgba(212,168,67,0.1);
+    padding: 4px 10px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .card-title {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .card-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  .card-kpis {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .kpi {
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .kpi-green { background: rgba(46,204,138,0.1); color: var(--green); }
+  .kpi-blue { background: rgba(74,158,255,0.1); color: var(--accent); }
+  .kpi-gold { background: rgba(212,168,67,0.1); color: var(--gold); }
+
+  /* WIDE CARD */
+  .card-wide {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    .card-wide { grid-template-columns: 1fr; }
+  }
+
+  /* ANALYSIS TABLE */
+  .analysis-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+  }
+
+  .analysis-table th {
+    text-align: right;
+    padding: 10px 16px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .analysis-table td {
+    padding: 12px 16px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: var(--text);
+  }
+
+  .analysis-table tr:last-child td { border-bottom: none; }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
+  }
+  .dot-green { background: var(--green); }
+  .dot-red { background: var(--red-soft); }
+  .dot-gold { background: var(--gold); }
+
+  /* SWOT */
+  .swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .swot-cell {
+    padding: 28px;
+    min-height: 160px;
+  }
+
+  .swot-cell:nth-child(1) { background: rgba(46,204,138,0.08); }
+  .swot-cell:nth-child(2) { background: rgba(255,107,107,0.08); }
+  .swot-cell:nth-child(3) { background: rgba(74,158,255,0.08); }
+  .swot-cell:nth-child(4) { background: rgba(212,168,67,0.08); }
+
+  .swot-header {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .swot-cell:nth-child(1) .swot-header { color: var(--green); }
+  .swot-cell:nth-child(2) .swot-header { color: var(--red-soft); }
+  .swot-cell:nth-child(3) .swot-header { color: var(--accent); }
+  .swot-cell:nth-child(4) .swot-header { color: var(--gold); }
+
+  .swot-list {
+    list-style: none;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 2;
+  }
+
+  .swot-list li::before {
+    content: '→ ';
+    color: inherit;
+    opacity: 0.6;
+  }
+
+  /* PERSONA CARD */
+  .persona-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .persona-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--gold), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    flex-shrink: 0;
+  }
+
+  .persona-name {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .persona-role {
+    font-size: 13px;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .persona-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .detail-row {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .detail-label {
+    color: var(--text-muted);
+    min-width: 100px;
+  }
+
+  .detail-value { color: var(--text); }
+
+  /* POST PREVIEW */
+  .post-preview {
+    background: var(--dark-3);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .post-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--accent));
+  }
+
+  .post-name {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .post-time {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .post-text {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+
+  .post-text .hook {
+    font-weight: 700;
+    color: var(--gold-light);
+  }
+
+  .post-engagement {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .post-engagement span { cursor: pointer; }
+  .post-engagement span:hover { color: var(--gold); }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-right: 32px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold), rgba(212,168,67,0.1));
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    right: -39px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 3px solid var(--dark);
+  }
+
+  .timeline-tag {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .timeline-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .timeline-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 48px 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+
+  footer .footer-logo {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
+    margin: 0 24px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .swot-grid { grid-template-columns: 1fr; }
+    .persona-card { grid-template-columns: 1fr; }
+    .hero-stats { gap: 24px; }
+  }
+
+  /* PROGRESS BAR */
+  .progress-bar {
+    background: rgba(255,255,255,0.05);
+    border-radius: 50px;
+    height: 6px;
+    margin-top: 8px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    transition: width 1s ease;
+  }
+
+  .skill-item {
+    margin-bottom: 20px;
+  }
+
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .skill-pct { color: var(--gold); font-weight: 600; }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .nav-logo {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  @media (max-width: 600px) {
+    nav { padding: 12px 16px; }
+    .nav-logo { display: none; }
+    .nav-links { gap: 18px; overflow-x: auto; white-space: nowrap; width: 100%; }
+  }
+
+  section { scroll-margin-top: 70px; }
+
+  .btn { display:inline-block; padding:12px 24px; border-radius:50px; font-size:14px; font-weight:600; text-decoration:none; border:1px solid rgba(212,168,67,0.4); color:var(--gold); transition:background .2s; }
+  .btn:hover { background:rgba(212,168,67,0.12); }
+  .btn-primary { background:linear-gradient(135deg,var(--gold),var(--gold-light)); color:#0A0A0F; border:none; }
+  .btn-primary:hover { opacity:.9; background:linear-gradient(135deg,var(--gold),var(--gold-light)); }
+  .btn-row { display:flex; gap:12px; flex-wrap:wrap; }
+  .about-text { font-size:16px; line-height:2; color:var(--text); max-width:760px; }
+  .note-box { margin-top:24px; padding:16px 20px; border-radius:12px; background:rgba(74,158,255,0.08); border-right:3px solid var(--accent); font-size:14px; line-height:1.9; color:var(--text); max-width:760px; }
+  .decisions-grid { margin-top:32px; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  @media (max-width: 600px) { .decisions-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">إبراهيم عبد ربه</div>
+  <ul class="nav-links">
+    <li><a href="#about">نبذة</a></li>
+    <li><a href="#analysis">المشاريع</a></li>
+    <li><a href="#strategy">الاستراتيجية</a></li>
+    <li><a href="#content">المحتوى</a></li>
+    <li><a href="#results">تحليل الفيديو</a></li>
+    <li><a href="#contact">تواصل</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-line"></div>
+  <div class="hero-line"></div>
+  <div class="hero-line"></div>
+
+  <div class="hero-content">
+    <div class="badge">SOCIAL MEDIA · CONTENT MARKETING · STRATEGY</div>
+    <h1 class="hero-title">
+      إبراهيم محمد عبد ربه<br>
+      <span>Marketing &amp; Content</span>
+    </h1>
+    <p class="hero-sub">
+      خريج تسويق وتجارة إلكترونية — جامعة الزقازيق 2026<br>
+      مشاريع تدريبية في السوشيال ميديا وصناعة المحتوى والاستراتيجية
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">8</span>
+        <span class="stat-label">مشاريع تدريبية</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">300</span>
+        <span class="stat-label">مشارك في دراسة التخرج</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">ممتاز</span>
+        <span class="stat-label">تقدير مشروع التخرج</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">اسكرول لتكتشف</div>
+</div>
+
+<div class="divider"></div>
+
+<section id="about">
+  <div class="section-label">نبذة عني</div>
+  <h2 class="section-title">إبراهيم محمد عبد ربه</h2>
+  <p class="about-text">
+    خريج تسويق وتجارة إلكترونية من جامعة الزقازيق (2026). مشروع تخرجي كان عن تأثير التسويق الفيروسي على قرارات الشراء في صناعة الملابس، بعينة 300 مشارك، وحصل على تقدير ممتاز.
+    أعمل حالياً Field Marketing Specialist في Trucway، وسبق لي العمل Creative في YAS Academy في صناعة المحتوى من الكتابة حتى المتابعة.
+  </p>
+  <div class="note-box">
+    <strong style="color:var(--accent);">ملاحظة:</strong>
+    المشاريع التالية تكليفات تدريبية من دورة Social Media Marketing في Yalla Start Academy. الأرقام والنسب الظاهرة افتراضية لغرض التمرين، والأهداف مقترحة وليست نتائج فعلية.
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SOCIAL MEDIA DIAGNOSIS -->
+<section id="analysis">
+  <div class="section-label">المشروع الأول · تكليف تدريبي</div>
+  <h2 class="section-title">تشخيص أداء السوشيال ميديا<br><span style="color:var(--gold)">Udacity Arabic</span></h2>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <div class="card-tag">PERFORMANCE ANALYSIS</div>
+      <h3 class="card-title">تحليل النتائج</h3>
+      <p class="card-desc">آخر 15 منشور على الصفحة — تحليل معمق لأنواع المحتوى وأداء كل نوع</p>
+      <div class="card-kpis">
+        <span class="kpi kpi-green">✓ Student Success Stories = أعلى Engagement</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🔍</div>
+      <div class="card-tag">DIAGNOSIS</div>
+      <h3 class="card-title">تشخيص المشكلة</h3>
+      <p class="card-desc">فجوة بين المحتوى التقني المتقدم واهتمامات الجمهور الباحث عن "كيف أبدأ؟"</p>
+      <div class="card-kpis">
+        <span class="kpi kpi-blue">الجمهور يريد بداية بسيطة</span>
+        <span class="kpi kpi-gold">التوقيت: ساعات متأخرة</span>
+      </div>
+    </div>
+
+    <div class="card card-wide">
+      <div>
+        <div class="card-tag">DECISIONS IF IN CHARGE</div>
+        <h3 class="card-title" style="margin-bottom:24px">قراراتي لو كنت المدير</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-tag">STOP</div>
+            <div class="timeline-title">إيقاف الروابط المباشرة في الكابشن</div>
+            <div class="timeline-desc">الخوارزميات تقلل وصول المنشورات التي تحتوي روابط خارجية — أضع الرابط في أول تعليق</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-tag">ADD</div>
+            <div class="timeline-title">إضافة Educational Memes</div>
+            <div class="timeline-desc">مرتبطة بمشاكل المبرمجين والمسوقين لكسر حدة المحتوى الجاف وزيادة الـ Reach العضوي</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-tag">CHANGE</div>
+            <div class="timeline-title">تغيير اللغة من الفصحى إلى العامية البيضاء</div>
+            <div class="timeline-desc">تقليل الحواجز مع فئة الشباب وتحويل القوائم النصية الممللة إلى Carousel تفاعلية بصرية</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card-tag">FINAL DECISION</div>
+        <div style="padding: 24px; background: var(--dark-3); border-radius: 12px; border: 1px solid rgba(212,168,67,0.2);">
+          <div style="font-size:13px; color:var(--text-muted); margin-bottom:12px">القرار النهائي</div>
+          <div style="font-family:'Tajawal',sans-serif; font-size:20px; font-weight:700; line-height:1.6; color:var(--text);">
+            "إحنا هنكسب المنافسين من باب <span style="color:var(--gold)">المحتوى التفاعلي + اللغة القريبة للشباب</span> لكسر صورة التعليم التقليدي الممل"
+          </div>
+        </div>
+        <div style="margin-top:20px;">
+          <div class="skill-item">
+            <div class="skill-header"><span>Engagement Rate (هدف مقترح)</span><span class="skill-pct">↑ 60%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Organic Reach (هدف مقترح)</span><span class="skill-pct">↑ 40%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Response Time (هدف مقترح)</span><span class="skill-pct">أول ساعتين</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COMPETITOR INTELLIGENCE -->
+<section>
+  <div class="section-label">المشروع الثاني · تكليف تدريبي</div>
+  <h2 class="section-title">تقرير استخبارات المنافسين<br><span style="color:var(--gold)">أكاديمية X vs أكاديمية Y</span></h2>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">🎯</div>
+      <div class="card-tag">COMPETITOR X — المنهج الأكاديمي</div>
+      <h3 class="card-title">أكاديمية X</h3>
+      <table class="analysis-table">
+        <tr><th>المحتوى</th><td>تعليمي — شرح أدوات ومصطلحات</td></tr>
+        <tr><th>الأقوى</th><td><span class="dot dot-green"></span>تصميم بصري عالي الجودة</td></tr>
+        <tr><th>الأضعف</th><td><span class="dot dot-red"></span>لا يردون على استفسارات الطلاب</td></tr>
+        <tr><th>يفتقدون</th><td>الجانب الإنساني — محتواهم جاف ورسمي جداً</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">💰</div>
+      <div class="card-tag">COMPETITOR Y — المنهج البيعي</div>
+      <h3 class="card-title">أكاديمية Y</h3>
+      <table class="analysis-table">
+        <tr><th>المحتوى</th><td>بيع مباشر — "سجل الآن" وعروض خصومات</td></tr>
+        <tr><th>الأقوى</th><td><span class="dot dot-green"></span>كاريزما المحاضر وإقناعه بالبيع</td></tr>
+        <tr><th>الأضعف</th><td><span class="dot dot-red"></span>المحتوى التعليمي المجاني ضعيف جداً</td></tr>
+        <tr><th>يفتقدون</th><td>محتوى Trend أو مواكبة التغيرات السريعة</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <div class="card-tag">OUR STRATEGY</div>
+      <h3 class="card-title">قرارنا التسويقي</h3>
+      <p class="card-desc" style="margin-bottom:16px">نكسبهم من باب <strong style="color:var(--text)">إثبات + Format</strong></p>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="padding:12px; background:rgba(46,204,138,0.08); border-radius:8px; font-size:13px;">
+          <div style="color:var(--green); font-weight:600; margin-bottom:4px">الإثبات (Proof)</div>
+          المنافس الأول يعلم فقط دون إظهار نتائج — نحن نعرض مشاريع حقيقية للطلاب نُفذت بالـ AI
+        </div>
+        <div style="padding:12px; background:rgba(74,158,255,0.08); border-radius:8px; font-size:13px;">
+          <div style="color:var(--accent); font-weight:600; margin-bottom:4px">الـ Format</div>
+          فيديوهات Reels سريعة بأسلوب Storytelling — ما يفتقده المنافسان اللذان يعتمدان على صور ثابتة
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SWOT -->
+<section>
+  <div class="section-label">المشروع الثالث · تكليف تدريبي</div>
+  <h2 class="section-title">تحليل SWOT<br><span style="color:var(--gold)">لأكاديمية تعليمية</span></h2>
+
+  <div class="swot-grid">
+    <div class="swot-cell">
+      <div class="swot-header">STRENGTHS — نقاط القوة</div>
+      <ul class="swot-list">
+        <li>مخزون قوي من نماذج أعمال الطلاب الناجحة</li>
+        <li>تخصص في "الذكاء الاصطناعي" — تريند حالي</li>
+        <li>مجتمع نشط يمكن تحويله إلى سفراء للعلامة</li>
+      </ul>
+    </div>
+    <div class="swot-cell">
+      <div class="swot-header">WEAKNESSES — نقاط الضعف</div>
+      <ul class="swot-list">
+        <li>تذبذب في مواعيد النشر يؤثر على الخوارزميات</li>
+        <li>تأخر الرد على التعليقات والرسائل</li>
+        <li>قلة المحتوى المرئي السريع (Reels/TikToks)</li>
+      </ul>
+    </div>
+    <div class="swot-cell">
+      <div class="swot-header">OPPORTUNITIES — الفرص</div>
+      <ul class="swot-list">
+        <li>موجة الطلب على أدوات الذكاء الاصطناعي</li>
+        <li>شراكات مع صنّاع المحتوى التقني</li>
+        <li>تفعيل ميزة "القنوات" على واتساب وإنستجرام</li>
+      </ul>
+    </div>
+    <div class="swot-cell">
+      <div class="swot-header">THREATS — التهديدات</div>
+      <ul class="swot-list">
+        <li>منافسة إعلانية بميزانيات ضخمة تسيطر على News Feed</li>
+        <li>تغير الخوارزميات المستمر</li>
+        <li>قنوات يوتيوب مجانية في نفس المجال</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="decisions-grid">
+    <div class="card">
+      <div class="card-tag">DECISION 1</div>
+      <h3 class="card-title">تثبيت Content Calendar</h3>
+      <p class="card-desc">الالتزام بنشر 3 Content Pillars أساسية (تعليمي، إثبات نتائج، تفاعلي) بشكل يومي ومنتظم لحل مشكلة عدم الانتظام</p>
+    </div>
+    <div class="card">
+      <div class="card-tag">DECISION 2</div>
+      <h3 class="card-title">حملة "أدوات الذكاء الاصطناعي"</h3>
+      <p class="card-desc">سلسلة Reels أسبوعية تشرح أداة AI جديدة لاستغلال فرصة الـ Trend وزيادة المتابعين الجدد بشكل ملحوظ</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COMMUNITY MANAGEMENT -->
+<section>
+  <div class="section-label">المشروع الرابع · تكليف تدريبي</div>
+  <h2 class="section-title">إدارة المجتمع<br><span style="color:var(--gold)">Community Management</span></h2>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">💬</div>
+      <div class="card-tag">COMMENT ANALYSIS</div>
+      <h3 class="card-title">تصنيف التعليقات</h3>
+      <p class="card-desc">نسب افتراضية لغرض التمرين</p>
+      <table class="analysis-table">
+        <tr><td><span class="dot dot-red"></span> استفسارات السعر</td><td style="color:var(--red-soft); font-weight:700;">60%</td></tr>
+        <tr><td><span class="dot dot-gold"></span> شكاوى الشحن</td><td style="color:var(--gold); font-weight:700;">20%</td></tr>
+        <tr><td><span class="dot dot-green"></span> مدح</td><td style="color:var(--green); font-weight:700;">10%</td></tr>
+        <tr><td><span style="color:var(--accent)">●</span> اقتراحات</td><td style="color:var(--accent); font-weight:700;">10%</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🚨</div>
+      <div class="card-tag">RECOMMENDATION 1 — URGENT</div>
+      <h3 class="card-title">حل مشكلة استفسارات الأسعار</h3>
+      <p class="card-desc">كتابة السعر والقياسات بوضوح داخل وصف كل منشور</p>
+      <div class="card-kpis">
+        <span class="kpi kpi-green">هدف: تقليل 40% من تعليقات "بكم السعر"</span>
+      </div>
+      <p class="card-desc" style="margin-top:12px;">KPI: نسبة تعليقات السعر مقارنة بإجمالي التعليقات خلال 30 يوم</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🤝</div>
+      <div class="card-tag">RECOMMENDATION 2 — MEDIUM</div>
+      <h3 class="card-title">تحسين جودة الردود (نبرة الصوت)</h3>
+      <p class="card-desc">معظم الردود الحالية آلية ورسمية جداً — نعيد صياغة القوالب لتصبح "بشرية وودودة" باسم العميل</p>
+      <div class="card-kpis">
+        <span class="kpi kpi-blue">هدف: ردود بشرية وشخصية على كل التعليقات</span>
+      </div>
+    </div>
+
+    <div class="card card-wide">
+      <div>
+        <div class="card-tag">TONE OF VOICE SAMPLES</div>
+        <h3 class="card-title" style="margin-bottom:20px">نماذج ردود قبل وبعد</h3>
+        <div style="display:grid; gap:16px;">
+          <div style="padding:16px; background:rgba(255,107,107,0.08); border-radius:10px; border-right:3px solid var(--red-soft);">
+            <div style="font-size:11px; color:var(--red-soft); margin-bottom:8px;">❌ قبل (آلي وجاف)</div>
+            <div style="font-size:13px; color:var(--text-muted);">"تم التواصل خاص" — على كل أنواع التعليقات</div>
+          </div>
+          <div style="padding:16px; background:rgba(46,204,138,0.08); border-radius:10px; border-right:3px solid var(--green);">
+            <div style="font-size:11px; color:var(--green); margin-bottom:8px;">✅ بعد (بشري وودود)</div>
+            <div style="font-size:13px; color:var(--text);">"أهلاً [اسم العميل]، شكراً لتواصلك معنا! بعتلك تفاصيل الطلب في رسالة خاصة 🌟"</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card-tag">RECOMMENDATION 3 — LONG TERM</div>
+        <div class="card-title" style="margin-bottom:16px; font-family:'Tajawal',sans-serif; font-size:18px; font-weight:700;">معالجة شكاوى الشحن</div>
+        <p class="card-desc" style="margin-bottom:16px;">إطلاق ميزة "تتبع الطلب الفوري" عبر رسائل الصفحة — تأخر الرد على الشكاوى يضر بسمعة البراند</p>
+        <div class="card-kpis" style="margin-top:0;">
+          <span class="kpi kpi-gold">هدف: خفض 50% من شكاوى الشحن خلال شهرين</span>
+        </div>
+        <div style="margin-top:16px; font-size:12px; color:var(--text-muted);">
+          KPI: عدد الشكاوى المتعلقة بالشحن في آخر 10 بوستات
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PERSONA & STRATEGY -->
+<section id="strategy">
+  <div class="section-label">المشروع الخامس · تكليف تدريبي</div>
+  <h2 class="section-title">شخصية المشتري والبراند<br><span style="color:var(--gold)">Buyer & Brand Persona</span></h2>
+
+  <div class="cards-grid">
+    <div class="card card-wide">
+      <div>
+        <div class="card-tag">BUYER PERSONA</div>
+        <div class="persona-card" style="margin-top:16px;">
+          <div class="persona-avatar">👩‍💻</div>
+          <div>
+            <div class="persona-name">سارة</div>
+            <div class="persona-role">خريجة تجارة | 23 سنة | 6,000 ج/شهر</div>
+            <div class="persona-detail">
+              <div class="detail-row">
+                <span class="detail-label">المشكلة:</span>
+                <span class="detail-value">خايفة الـ AI يلغي وظيفتها — عايزة تدخل التسويق الرقمي</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">حلمها:</span>
+                <span class="detail-value">تشتغل في وكالة إعلانية كبيرة بمرتب مجزي</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">السوشيال:</span>
+                <span class="detail-value">إنستجرام وتيك توك — تحب الفيديو السريع</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">ليه تختار الأكاديمية:</span>
+                <span class="detail-value">نتائج حقيقية + تطبيق عملي</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card-tag">BRAND PERSONA</div>
+        <div style="margin-top:16px;">
+          <div style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
+            <div class="persona-avatar">🧑‍💼</div>
+            <div>
+              <div class="persona-name">البراند</div>
+              <div class="persona-role">28 سنة | شاب طموح | متمكن في مجاله</div>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="padding:12px; background:var(--dark-3); border-radius:8px; font-size:13px;">
+              <div style="color:var(--gold); margin-bottom:4px; font-size:11px;">نبرة الصوت</div>
+              واثق، ملهم، وواضح — بدون تعقيد
+            </div>
+            <div style="padding:12px; background:var(--dark-3); border-radius:8px; font-size:13px;">
+              <div style="color:var(--gold); margin-bottom:4px; font-size:11px;">طريقة الكلام</div>
+              بلهجة مصرية بيضاء قريبة للشباب، بعيداً عن الرسميات
+            </div>
+            <div style="padding:12px; background:var(--dark-3); border-radius:8px; font-size:13px;">
+              <div style="color:var(--gold); margin-bottom:4px; font-size:11px;">يعرف</div>
+              تفاصيل سوق العمل ومواكب للتكنولوجيا
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROPOSED STRATEGY -->
+<section>
+  <div class="section-label">المشروع السادس · تكليف تدريبي</div>
+  <h2 class="section-title">الاستراتيجية المقترحة<br><span style="color:var(--gold)">خلال 6 شهور</span></h2>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">🎯</div>
+      <div class="card-tag">OBJECTIVES — أهداف مقترحة</div>
+      <h3 class="card-title">الأهداف</h3>
+      <p class="card-desc">أهداف مقترحة خلال 6 شهور، وتُراجَع بعد معرفة الأرقام الحالية للصفحة</p>
+      <div style="display:flex; flex-direction:column; gap:12px; margin-top:8px;">
+        <div style="display:flex; align-items:center; gap:10px; font-size:14px;">
+          <span style="color:var(--gold); font-size:20px; font-weight:800;">8K</span>
+          <span style="color:var(--text-muted);">متابع جديد (فيسبوك + لينكد إن)</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14px;">
+          <span style="color:var(--green); font-size:20px; font-weight:800;">300</span>
+          <span style="color:var(--text-muted);">تسجيل طالب في كورسات الـ AI والبرمجة</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14px;">
+          <span style="color:var(--accent); font-size:20px; font-weight:800;">500</span>
+          <span style="color:var(--text-muted);">عضو في جروب خاص تفاعلي</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🏆</div>
+      <div class="card-tag">COMPETITIVE ADVANTAGE</div>
+      <h3 class="card-title">القيمة التنافسية</h3>
+      <p class="card-desc" style="margin-bottom:16px;">نعتمد على "نتائج الطلاب + الثقة" من خلال:</p>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div class="kpi kpi-green" style="display:block; padding:8px 12px;">إظهار مشاريع حقيقية (Portfolio) بعد الكورس</div>
+        <div class="kpi kpi-blue" style="display:block; padding:8px 12px;">نظام التقسيط لتسهيل الدفع</div>
+        <div class="kpi kpi-gold" style="display:block; padding:8px 12px;">محتوى تعليمي عميق (Case Studies) لا مجرد نصائح</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📅</div>
+      <div class="card-tag">CONTENT PLAN — عيّنة من خطة 12 منشور/شهر</div>
+      <h3 class="card-title">عيّنة من خطة المحتوى الشهري</h3>
+      <table class="analysis-table">
+        <tr><th>#</th><th>المنصة</th><th>النوع</th><th>الهدف</th></tr>
+        <tr><td>1</td><td>فيسبوك</td><td>Carousel</td><td>وعي</td></tr>
+        <tr><td>2</td><td>إنستجرام</td><td>Reel</td><td>تفاعل</td></tr>
+        <tr><td>3</td><td>لينكد إن</td><td>Post + Photo</td><td>ثقة</td></tr>
+        <tr><td>4</td><td>فيسبوك</td><td>Post</td><td>مبيعات</td></tr>
+        <tr><td>8</td><td>فيسبوك</td><td>Video</td><td>ثقة</td></tr>
+        <tr><td>10</td><td>فيسبوك</td><td>Carousel</td><td>مبيعات</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTENT SAMPLES -->
+<section id="content">
+  <div class="section-label">المشروع السابع · تكليف تدريبي</div>
+  <h2 class="section-title">نماذج المحتوى المنتج<br><span style="color:var(--gold)">Content Samples</span></h2>
+
+  <div class="cards-grid">
+
+    <!-- Long Copy Post -->
+    <div class="card card-wide">
+      <div>
+        <div class="card-tag">LONG COPY POST — نموذج تدريبي</div>
+        <h3 class="card-title" style="margin-bottom:20px">بوست اللونج كوبي</h3>
+        <div class="post-preview">
+          <div class="post-header">
+            <div class="post-avatar"></div>
+            <div>
+              <div class="post-name">Yalla Start Academy</div>
+              <div class="post-time">نموذج تدريبي — غير منشور</div>
+            </div>
+          </div>
+          <div class="post-text">
+            <span class="hook">"لو الماركتينج مجرد بوست وصورة.. كان زمان كل الناس بقت مليونيرات!"</span>
+            <br><br>
+            (الألم): عارف الشعور اللي بيجيلك لما تصرف ميزانية إعلاناتك كلها وفي الآخر "صفر عملاء"؟
+            الوجع مش في الفلوس اللي ضاعت، الوجع في الوقت والمجهود اللي بتحس إنه ملوش قيمة...
+            <br><br>
+            (الأمل): بس خليني أقولك سر صغير.. المشكلة مش فيك. المشكلة إنك بتلعب شطرنج وانت مش عارف القواعد.
+            <br><br>
+            <span style="color:var(--gold)">في Yalla Start Academy، إحنا مش بنديك كورس وخلاص. إحنا بننقل لك خبرة سنين في السوق المصري والعربي...</span>
+          </div>
+          <div class="post-engagement">
+            <span>👍 تفاعل</span>
+            <span>💬 تعليق</span>
+            <span>🔗 مشاركة</span>
+            <span style="margin-right:auto; color:var(--gold)">CTA: ابعت كلمة START</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card-tag">ANALYSIS</div>
+        <h3 class="card-title" style="margin-bottom:16px">تحليل البوست</h3>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="padding:14px; background:var(--dark-3); border-radius:10px;">
+            <div style="color:var(--gold); font-size:12px; margin-bottom:6px;">الهوك</div>
+            <div style="font-size:13px; color:var(--text-muted);">يخلق فضولاً وصدمة فورية من أول جملة</div>
+          </div>
+          <div style="padding:14px; background:var(--dark-3); border-radius:10px;">
+            <div style="color:var(--accent); font-size:12px; margin-bottom:6px;">البنية: ألم → أمل → حل</div>
+            <div style="font-size:13px; color:var(--text-muted);">تسلسل عاطفي يجذب القارئ ويبقيه للنهاية</div>
+          </div>
+          <div style="padding:14px; background:var(--dark-3); border-radius:10px;">
+            <div style="color:var(--green); font-size:12px; margin-bottom:6px;">الـ CTA</div>
+            <div style="font-size:13px; color:var(--text-muted);">كلمة "START" في رسالة — يزود التفاعل ويجمع leads بدون رابط خارجي</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reel Script -->
+    <div class="card">
+      <div class="card-icon">🎬</div>
+      <div class="card-tag">REEL SCRIPT</div>
+      <h3 class="card-title">سكريبت ريل: Inbound vs Outbound</h3>
+      <div style="display:flex; flex-direction:column; gap:10px; margin-top:12px;">
+        <div style="padding:12px; background:rgba(255,107,107,0.08); border-radius:8px;">
+          <div style="font-size:10px; color:var(--red-soft); margin-bottom:4px;">[00:00-00:04] الـ HOOK — Pain Point</div>
+          <div style="font-size:12px; color:var(--text-muted);">"بتصرف ميزانية الأكاديمية كلها على إعلانات الشوارع والورق وبرضه مفيش حد بيسجل؟"</div>
+        </div>
+        <div style="padding:12px; background:rgba(212,168,67,0.08); border-radius:8px;">
+          <div style="font-size:10px; color:var(--gold); margin-bottom:4px;">[00:04-00:11] مثال Outbound</div>
+          <div style="font-size:12px; color:var(--text-muted);">"تخيل إنك بتوقف طالب في الشارع بالعافية عشان تديله ورقة كورس"</div>
+        </div>
+        <div style="padding:12px; background:rgba(74,158,255,0.08); border-radius:8px;">
+          <div style="font-size:10px; color:var(--accent); margin-bottom:4px;">[00:11-00:19] مثال Inbound</div>
+          <div style="font-size:12px; color:var(--text-muted);">"لكن الـ Inbound هو إنك تعمل محتوى مفيد يخلي الطالب هو اللي يدور عليك"</div>
+        </div>
+        <div style="padding:12px; background:rgba(46,204,138,0.08); border-radius:8px;">
+          <div style="font-size:10px; color:var(--green); margin-bottom:4px;">[00:22-00:25] الـ CTA</div>
+          <div style="font-size:12px; color:var(--text-muted);">"لو لسه بتطارد طلابك.. وقف فوراً! ابدأ استراتيجية Inbound صح"</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 Content Ideas -->
+    <div class="card">
+      <div class="card-icon">💡</div>
+      <div class="card-tag">3 VIRAL IDEAS — ZERO BUDGET</div>
+      <h3 class="card-title">3 أفكار فيروسية بميزانية صفر</h3>
+      <div style="display:flex; flex-direction:column; gap:16px; margin-top:16px;">
+        <div style="border-right:2px solid var(--gold); padding-right:12px;">
+          <div style="font-size:12px; color:var(--gold); margin-bottom:4px;">فكرة 1 — Behind the Scenes</div>
+          <div style="font-size:13px; font-weight:600; margin-bottom:4px;">"كيف نجهز المنهج ليناسب سوق العمل؟"</div>
+          <div style="font-size:12px; color:var(--text-muted);">Reel سريع — يبني ثقة عاطفية لأن الجمهور يحب الجهد خلف الكاميرا</div>
+        </div>
+        <div style="border-right:2px solid var(--accent); padding-right:12px;">
+          <div style="font-size:12px; color:var(--accent); margin-bottom:4px;">فكرة 2 — Case Study</div>
+          <div style="font-size:13px; font-weight:600; margin-bottom:4px;">"ليه الحملة الإعلانية دي فشلت؟ — غلطة كلفت $1000"</div>
+          <div style="font-size:12px; color:var(--text-muted);">Carousel — يجذب جمهور جديد يبحث عن تجنب الفشل ويحقق Saves عالية</div>
+        </div>
+        <div style="border-right:2px solid var(--green); padding-right:12px;">
+          <div style="font-size:12px; color:var(--green); margin-bottom:4px;">فكرة 3 — Myth Busting</div>
+          <div style="font-size:13px; font-weight:600; margin-bottom:4px;">"حقيقة الربح من النت في يوم وليلة.. كفاية اشتغالات!"</div>
+          <div style="font-size:12px; color:var(--text-muted);">فيديو قصير — تلمس تريند وتصحح مفاهيم خاطئة = الأكاديمية تظهر كخبير أمين</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- VIDEO ANALYSIS TASKS -->
+<section id="results">
+  <div class="section-label">المشروع الثامن · تكليف تدريبي</div>
+  <h2 class="section-title">تحليل الفيديوهات وتحسينها<br><span style="color:var(--gold)">Video Analysis & Optimization</span></h2>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">👗</div>
+      <div class="card-tag">TASK 1 — Fashion Brand Reel</div>
+      <h3 class="card-title">فيديو ريل لبراند ملابس</h3>
+      <p class="card-desc" style="margin-bottom:16px;">استعراض كيفية تلبيس طقم واحد بأكتر من شكل للخروجات الصباحية والليلية</p>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="padding:10px; background:rgba(255,107,107,0.06); border-radius:8px; font-size:12px; color:var(--text-muted);">
+          <strong style="color:var(--red-soft);">المشكلة:</strong> CTA ضعيف "اطلبي من اللينك" — والموسيقى مزعجة تقفّل الناس
+        </div>
+        <div style="padding:10px; background:rgba(46,204,138,0.06); border-radius:8px; font-size:12px; color:var(--text-muted);">
+          <strong style="color:var(--green);">الحل:</strong> Hook جديد بجملة "محتارة تلبسي إيه في خروجة بكرة؟" مع CTA أقوى "ابعتي كلمة صيف في الكومنتات وهنبعتلك الكتالوج"
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🍔</div>
+      <div class="card-tag">TASK 2 — Restaurant KPIs</div>
+      <h3 class="card-title">مطعم برجر جديد — KPIs المهمة</h3>
+      <div style="display:flex; flex-direction:column; gap:12px; margin-top:12px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:10px; background:var(--dark-3); border-radius:8px; font-size:13px;">
+          <span>عدد الطلبات (Sales Volume)</span>
+          <span class="kpi kpi-green">✓ مهم</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:10px; background:var(--dark-3); border-radius:8px; font-size:13px;">
+          <span>متوسط سعر الطلب (AOV)</span>
+          <span class="kpi kpi-green">✓ مهم</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:10px; background:var(--dark-3); border-radius:8px; font-size:13px;">
+          <span>نسبة العودة (Retention)</span>
+          <span class="kpi kpi-green">✓ مهم</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:10px; background:rgba(255,107,107,0.06); border-radius:8px; font-size:13px;">
+          <span>عدد اللايكات على الفيسبوك</span>
+          <span class="kpi" style="background:rgba(255,107,107,0.15); color:var(--red-soft);">✗ مش مهم</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-wide">
+      <div>
+        <div class="card-tag">TASK 3 — Cooking TikTok Analysis</div>
+        <h3 class="card-title" style="margin-bottom:16px;">تحليل فيديو طبخ TikTok</h3>
+        <table class="analysis-table">
+          <tr>
+            <th>العنصر</th>
+            <th>الأصلي</th>
+            <th>المحسّن</th>
+          </tr>
+          <tr>
+            <td>الـ Hook</td>
+            <td style="color:var(--text-muted);">صورة الأكلة فقط</td>
+            <td style="color:var(--green);">"مترميش العيش الفينو.. هقولك تعمل بيه أحلى سويت آند ساور"</td>
+          </tr>
+          <tr>
+            <td>الـ CTA</td>
+            <td style="color:var(--text-muted);">"تابعوني عشان تشوفوا وصفات تانية"</td>
+            <td style="color:var(--green);">"اكتب وصفة في كومنت وهبعتلك المقادير بالتفصيل"</td>
+          </tr>
+          <tr>
+            <td>السبب</td>
+            <td style="color:var(--text-muted);">لا يثير فضول المشاهد لإكمال الفيديو</td>
+            <td style="color:var(--gold);">يزود التفاعل بكتير عشان يخلق حوار</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <div class="card-tag">PLAN — Digital Academy</div>
+        <h3 class="card-title" style="margin-bottom:16px;">خطة التأسيس الرقمي — BNS Academy</h3>
+        <div style="padding:20px; background:var(--dark-3); border-radius:12px; border:1px solid rgba(212,168,67,0.15);">
+          <div style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">من: مدير التسويق | إلى: إدارة BNS Academy</div>
+          <div style="font-size:14px; font-weight:600; color:var(--text); margin-bottom:12px;">لماذا يجب أن نبدأ فوراً؟</div>
+          <div style="display:flex; flex-direction:column; gap:8px; font-size:13px; color:var(--text-muted);">
+            <div>✓ بناء الثقة والمصداقية (Social Proof)</div>
+            <div>✓ الوصول المباشر للجمهور المستهدف بتكلفة أقل</div>
+            <div>✓ خدمة العملاء والتفاعل السريع</div>
+          </div>
+          <div style="margin-top:16px; padding:12px; background:rgba(212,168,67,0.08); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--gold);">المنصة:</strong> فيسبوك — لأنه الأكثر تجمعاً للأولياء والشباب في المنطقة
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="contact" style="text-align:center">
+  <div class="section-label" style="justify-content:center">تواصل معي</div>
+  <h2 class="section-title" style="margin-bottom:28px">خلّينا نتواصل</h2>
+  <div class="btn-row" style="justify-content:center">
+    <a class="btn btn-primary" href="https://wa.me/201144308246" target="_blank" rel="noopener">واتساب</a>
+    <a class="btn" href="mailto:ibrahemmohamedabdrabo@gmail.com">البريد الإلكتروني</a>
+    <a class="btn" href="https://www.linkedin.com/in/ibrahem-mohamed-abdrabo-372b953aa" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <p class="card-desc" style="margin-top:20px" dir="ltr">01144308246 · ibrahemmohamedabdrabo@gmail.com</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Ibrahim Mohamed Abdrabo</div>
+  <p>مشاريع تدريبية في التحليل الاستراتيجي وصناعة المحتوى وإدارة المجتمعات</p>
+  <p style="margin-top:8px; font-size:11px; opacity:0.5;">Social Media · Content Strategy · Community Management · KPIs · Copywriting</p>
+</footer>
+
+<script>
+  if ('IntersectionObserver' in window) {
+    document.querySelectorAll('.progress-fill').forEach(b => { b.dataset.w = b.style.width; b.style.width = '0'; });
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.progress-fill').forEach(b => { b.style.width = b.dataset.w; });
+          sectionObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('section').forEach(s => sectionObserver.observe(s));
+
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, i * 80);
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(24px)';
+      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease';
+      cardObserver.observe(card);
+    });
+  }
+</script>
+
+</body>
+</html>
